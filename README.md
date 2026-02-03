@@ -234,3 +234,23 @@ F1 Score = 2 × (Precision × Recall) / (Precision + Recall)
 ## 📝 License
 
 이 프로젝트는 데이콘 대회 규정을 따릅니다.
+
+---
+
+## 🤖 사용된 모델 및 라이브러리
+
+### KoE5 (Korean E5 Embedding Model)
+
+본 프로젝트에서는 **텍스트 임베딩 및 모델 학습**을 위해 한국어 임베딩 모델 **KoE5**를 사용했습니다.
+
+- **모델**: [nlpai-lab/KoE5](https://huggingface.co/nlpai-lab/KoE5)
+- **GitHub**: [nlpai-lab/KURE](https://github.com/nlpai-lab/KURE)
+- **라이선스**: MIT License
+
+```python
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("nlpai-lab/KoE5")
+embeddings = model.encode(sentences)
+```
+
